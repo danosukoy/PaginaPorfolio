@@ -1,27 +1,30 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { Calendar, MapPin, Briefcase } from "lucide-react";
 
 const experience = [
   {
-    role: 'Game Developer',
-    company: 'Studio XYZ',
-    period: '2024 - Presente',
-    location: 'Remoto',
-    description: 'Desarrollo de gameplay systems, IA de enemigos y optimización de rendimiento para título AA.',
+    role: "Game Developer",
+    company: "Studio XYZ",
+    period: "2024 - Presente",
+    location: "Remoto",
+    description:
+      "Desarrollo de gameplay systems, IA de enemigos y optimización de rendimiento para título AA.",
   },
   {
-    role: 'Junior Game Programmer',
-    company: 'Indie Studio ABC',
-    period: '2022 - 2024',
-    location: 'Madrid, España',
-    description: 'Implementación de mecánicas de juego, integración de assets y debugging multiplataforma.',
+    role: "Junior Game Programmer",
+    company: "Indie Studio ABC",
+    period: "2022 - 2024",
+    location: "Madrid, España",
+    description:
+      "Implementación de mecánicas de juego, integración de assets y debugging multiplataforma.",
   },
   {
-    role: 'Game Dev Intern',
-    company: 'GameJam Collective',
-    period: '2021 - 2022',
-    location: 'Barcelona, España',
-    description: 'Participación en múltiples game jams, prototipado rápido y desarrollo de juegos mobile.',
+    role: "Game Dev Intern",
+    company: "GameJam Collective",
+    period: "2021 - 2022",
+    location: "Barcelona, España",
+    description:
+      "Participación en múltiples game jams, prototipado rápido y desarrollo de juegos mobile.",
   },
 ];
 
@@ -30,32 +33,39 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-screen-x1 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div
             id="about-bio"
             data-animate
             className={`transition-all duration-700 ${
-              visibleSections.has('about-bio') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              visibleSections.has("about-bio")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-gold text-sm uppercase tracking-[0.3em]">Sobre mí</span>
+            <span className="text-gold text-sm uppercase tracking-[0.3em]">
+              Sobre mí
+            </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">
               Passionate Game Developer
             </h2>
             <div className="space-y-4 text-text-muted leading-relaxed">
               <p>
-                Soy un desarrollador de videojuegos con más de 3 años de experiencia creando 
-                experiencias interactivas en múltiples plataformas. Mi pasión está en el gameplay 
-                programming y la creación de sistemas que hacen que los juegos se sientan bien.
+                Soy un desarrollador de videojuegos con más de 3 años de
+                experiencia creando experiencias interactivas en múltiples
+                plataformas. Mi pasión está en el gameplay programming y la
+                creación de sistemas que hacen que los juegos se sientan bien.
               </p>
               <p>
-                He trabajado con Unity, Unreal Engine y Godot, desarrollando desde juegos mobile 
-                hypercasual hasta proyectos AA con sistemas complejos de IA y multijugador.
+                He trabajado con Unity, Unreal Engine y Godot, desarrollando
+                desde juegos mobile hypercasual hasta proyectos AA con sistemas
+                complejos de IA y multijugador.
               </p>
               <p>
-                Cuando no estoy programando, participo en game jams, contribuyo a proyectos 
-                open source y experimento con nuevas tecnologías de rendering y procedural generation.
+                Cuando no estoy programando, participo en game jams, contribuyo
+                a proyectos open source y experimento con nuevas tecnologías de
+                rendering y procedural generation.
               </p>
             </div>
 
@@ -79,10 +89,14 @@ export default function About() {
             id="about-experience"
             data-animate
             className={`transition-all duration-700 delay-200 ${
-              visibleSections.has('about-experience') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              visibleSections.has("about-experience")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-xl font-semibold text-white mb-6">Experiencia</h3>
+            <h3 className="text-xl font-semibold text-white mb-6">
+              Experiencia
+            </h3>
             <div className="space-y-6">
               {experience.map((exp, index) => (
                 <div
