@@ -50,7 +50,7 @@ export default function Skills() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="skills" className="py-24 px-6 bg-dark-lighter">
+    <section id="skills" className="py-24 px-4 bg-dark-lighter">
       <div className="max-w-screen-x1 mx-auto">
         <div
           id="skills-header"
@@ -67,7 +67,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
             Tech Stack
           </h2>
-          <p className="text-text-muted max-w-xl mx-auto">
+          <p className="text-text-muted max-w-2xl mx-auto">
             Tecnologías y herramientas que uso para dar vida a los juegos
           </p>
         </div>
