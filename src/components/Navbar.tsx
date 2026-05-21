@@ -26,7 +26,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-screen-x1 mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="w-full mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="text-gold font-bold text-xl tracking-wider">
           DEV<span className="text-white">.PORTFOLIO</span>
         </a>

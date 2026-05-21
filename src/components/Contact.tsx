@@ -68,7 +68,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 px-4 bg-dark-lighter">
-      <div className="max-w-screen-x1 mx-auto text-center">
+      <div className="w-full mx-auto text-center">
         <div
           id="contact-header"
           data-animate

@@ -33,7 +33,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-24 px-4">
-      <div className="max-w-screen-x1 mx-auto">
+      <div className="w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div
             id="about-bio"

@@ -3,7 +3,7 @@ import { Gamepad2 } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="py-8 px-6 border-t border-dark-border">
-      <div className="max-w-screen-x1 mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-text-muted">
           <Gamepad2 size={16} className="text-gold" />
           <span className="text-sm">
