@@ -84,7 +84,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
             ¿Hablamos?
           </h2>
-          <p className="text-text-muted max-w-2x1 mx-auto">
+          <p className="text-text-muted max-w-3xl mx-auto">
             Estoy siempre abierto a nuevas oportunidades, colaboraciones en
             proyectos indie o simplemente charlar sobre game dev.
           </p>
