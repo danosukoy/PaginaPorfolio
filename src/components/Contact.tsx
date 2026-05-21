@@ -81,7 +81,7 @@ export default function Contact() {
           <span className="text-gold text-sm uppercase tracking-[0.3em]">
             Contacto
           </span>
-          <h2 className="text-screen-x1 md:text-5xl font-bold text-white mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
             ¿Hablamos?
           </h2>
           <p className="text-text-muted max-w-lg mx-auto">

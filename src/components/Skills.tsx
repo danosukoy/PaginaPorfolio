@@ -51,7 +51,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-24 px-6 bg-dark-lighter">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen-x1 mx-auto">
         <div
           id="skills-header"
           data-animate

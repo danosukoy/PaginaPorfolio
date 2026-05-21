@@ -7,7 +7,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen-x1 mx-auto">
         <div
           id="projects-header"
           data-animate
