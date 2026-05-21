@@ -32,7 +32,7 @@ export default function About() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="about" className="py-24 px-4">
+    <section id="about" className="py-24 px-8 lg:px-16">
       <div className="w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div

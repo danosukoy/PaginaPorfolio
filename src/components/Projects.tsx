@@ -6,7 +6,7 @@ export default function Projects() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="projects" className="py-24 px-4">
+    <section id="projects" className="py-24 px-8 lg:px-16">
       <div className="w-full mx-auto">
         <div
           id="projects-header"

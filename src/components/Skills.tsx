@@ -50,7 +50,7 @@ export default function Skills() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="skills" className="py-24 px-4 bg-dark-lighter">
+    <section id="skills" className="py-24 px-8 lg:px-16 bg-dark-lighter">
       <div className="w-full mx-auto">
         <div
           id="skills-header"
