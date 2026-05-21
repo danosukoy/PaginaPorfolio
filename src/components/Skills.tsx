@@ -1,36 +1,48 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { Code2, Gamepad2, Layers, Terminal, Wrench, Brain } from 'lucide-react';
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { Code2, Gamepad2, Layers, Terminal, Wrench, Brain } from "lucide-react";
 
 const skillCategories = [
   {
     icon: Gamepad2,
-    title: 'Game Engines',
-    skills: ['Unity', 'Unreal Engine 5', 'Godot', 'Custom Engines'],
+    title: "Game Engines",
+    skills: ["Unity", "Unreal Engine 5", "Godot", "Custom Engines"],
   },
   {
     icon: Code2,
-    title: 'Lenguajes',
-    skills: ['C#', 'C++', 'GDScript', 'TypeScript', 'Python', 'Lua'],
+    title: "Lenguajes",
+    skills: ["C#", "C++", "GDScript", "TypeScript", "Python", "Lua"],
   },
   {
     icon: Brain,
-    title: 'Especialidades',
-    skills: ['Gameplay Programming', 'AI Systems', 'Physics', 'Multiplayer', 'Shader Programming'],
+    title: "Especialidades",
+    skills: [
+      "Gameplay Programming",
+      "AI Systems",
+      "Physics",
+      "Multiplayer",
+      "Shader Programming",
+    ],
   },
   {
     icon: Layers,
-    title: 'Herramientas',
-    skills: ['Git', 'Perforce', 'Jira', 'Blender', 'FMOD', 'Visual Studio'],
+    title: "Herramientas",
+    skills: ["Git", "Perforce", "Jira", "Blender", "FMOD", "Visual Studio"],
   },
   {
     icon: Terminal,
-    title: 'Backend & Web',
-    skills: ['Node.js', 'REST APIs', 'WebSockets', 'Docker', 'AWS'],
+    title: "Backend & Web",
+    skills: ["Node.js", "REST APIs", "WebSockets", "Docker", "AWS"],
   },
   {
     icon: Wrench,
-    title: 'Otros',
-    skills: ['CI/CD', 'Agile/Scrum', 'Code Review', 'Technical Design', 'Optimization'],
+    title: "Otros",
+    skills: [
+      "CI/CD",
+      "Agile/Scrum",
+      "Code Review",
+      "Technical Design",
+      "Optimization",
+    ],
   },
 ];
 
@@ -39,15 +51,19 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-24 px-6 bg-dark-lighter">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div
           id="skills-header"
           data-animate
           className={`text-center mb-16 transition-all duration-700 ${
-            visibleSections.has('skills-header') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            visibleSections.has("skills-header")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-gold text-sm uppercase tracking-[0.3em]">Habilidades</span>
+          <span className="text-gold text-sm uppercase tracking-[0.3em]">
+            Habilidades
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
             Tech Stack
           </h2>
@@ -60,7 +76,9 @@ export default function Skills() {
           id="skills-grid"
           data-animate
           className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 delay-200 ${
-            visibleSections.has('skills-grid') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            visibleSections.has("skills-grid")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
           }`}
         >
           {skillCategories.map((category, index) => {
@@ -75,7 +93,9 @@ export default function Skills() {
                   <div className="p-2 bg-gold/10 rounded-sm group-hover:bg-gold/20 transition-colors">
                     <Icon size={20} className="text-gold" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {category.title}
+                  </h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (

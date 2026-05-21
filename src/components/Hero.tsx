@@ -1,4 +1,4 @@
-import { ChevronDown, Gamepad2 } from 'lucide-react';
+import { ChevronDown, Gamepad2 } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -8,13 +8,14 @@ export default function Hero() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, var(--color-gold) 1px, transparent 0)',
-            backgroundSize: '40px 40px',
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, var(--color-gold) 1px, transparent 0)",
+            backgroundSize: "40px 40px",
           }}
         />
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-3xl">
+      <div className="relative z-10 text-center px-6 max-w-7xl">
         <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-6">
           <Gamepad2 size={16} />
           <span>Game Developer</span>
@@ -26,8 +27,8 @@ export default function Hero() {
         </h1>
 
         <p className="text-text-muted text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
-          Creo experiencias interactivas memorables. Especializado en gameplay programming, 
-          sistemas de IA y diseño de mecánicas innovadoras.
+          Creo experiencias interactivas memorables. Especializado en gameplay
+          programming, sistemas de IA y diseño de mecánicas innovadoras.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

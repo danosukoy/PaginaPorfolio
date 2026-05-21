@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: 'Proyectos', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Sobre mí', href: '#about' },
-  { label: 'Contacto', href: '#contact' },
+  { label: "Proyectos", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Sobre mí", href: "#about" },
+  { label: "Contacto", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -14,17 +14,19 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-dark/95 backdrop-blur-md border-b border-dark-border' : 'bg-transparent'
+        scrolled
+          ? "bg-dark/95 backdrop-blur-md border-b border-dark-border"
+          : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="text-gold font-bold text-xl tracking-wider">
           DEV<span className="text-white">.PORTFOLIO</span>
         </a>
