@@ -17,25 +17,25 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-8 lg:px-16 w-full flex flex-col items-center">
-        <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-8">
+      <div className="relative z-10 text-center px-8 lg:px-16 w-full flex flex-col items-center gap-2">
+        <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-12">
           <Gamepad2 size={16} />
           <span>Game Developer</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-10 leading-tight">
           Daniel
           <span className="text-gold"> Dongo</span>
         </h1>
 
-        <p className="text-center text-lg md:text-xl mb-14 max-w-xl mx-auto leading-relaxed">
+        <p className="text-center text-lg md:text-xl mb-16 max-w-xl w-full leading-relaxed">
           Creo experiencias interactivas memorables. Especializado en gameplay
           programming, sistemas de IA y diseño de mecánicas innovadoras.
         </p>
 
         <ProjectMarquee projects={projects} />
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10">
           <a
             href="#projects"
             className="px-8 py-3 bg-gold text-dark font-semibold rounded-sm hover:bg-gold-light transition-all duration-300 uppercase tracking-wider text-sm"
