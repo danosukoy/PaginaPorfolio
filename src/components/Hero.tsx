@@ -28,7 +28,7 @@ export default function Hero() {
           <span className="text-gold"> Dongo</span>
         </h1>
 
-        <p className="text-center text-lg md:text-xl mb-14 max-w-xl mx-auto leading-relaxed">
+        <p className="text-center md:text-xl mb-14 max-w-xl mx-auto leading-relaxed">
           Creo experiencias interactivas memorables. Especializado en gameplay
           programming, sistemas de IA y diseño de mecánicas innovadoras.
         </p>
