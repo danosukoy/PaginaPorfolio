@@ -6,12 +6,12 @@ export default function Projects() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="projects" className="py-32 px-8 lg:px-16 w-full">
+    <section id="projects" className="py-40 px-8 lg:px-16 w-full">
       <div className="w-full mx-auto">
         <div
           id="projects-header"
           data-animate
-          className={`text-center mb-16 transition-all duration-700 ${
+          className={`text-center mb-20 transition-all duration-700 ${
             visibleSections.has("projects-header")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -20,7 +20,7 @@ export default function Projects() {
           <span className="text-gold text-sm uppercase tracking-[0.3em]">
             Portfolio
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Proyectos Destacados
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ export default function Projects() {
         <div
           id="projects-grid"
           data-animate
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 delay-200 ${
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 delay-200 ${
             visibleSections.has("projects-grid")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"

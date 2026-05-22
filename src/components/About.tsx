@@ -32,9 +32,9 @@ export default function About() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="about" className="py-32 px-8 lg:px-16 w-full">
+    <section id="about" className="py-40 px-8 lg:px-16 w-full">
       <div className="w-full mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div
             id="about-bio"
             data-animate
@@ -47,10 +47,10 @@ export default function About() {
             <span className="text-gold text-sm uppercase tracking-[0.3em]">
               Sobre mí
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">
-              Passionate Game Developer
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-8">
+              Passionate Gameplay Developer
             </h2>
-            <div className="space-y-4 text-text-muted leading-relaxed">
+            <div className="space-y-6 text-text-muted leading-relaxed">
               <p>
                 Soy un desarrollador de videojuegos con más de 3 años de
                 experiencia creando experiencias interactivas en múltiples
@@ -69,7 +69,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-6 mt-8">
+            <div className="flex flex-wrap gap-8 mt-10">
               <div className="flex items-center gap-2 text-text-muted">
                 <Calendar size={16} className="text-gold" />
                 <span className="text-sm">3+ años de experiencia</span>
@@ -94,10 +94,10 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-xl font-semibold text-white mb-6">
+            <h3 className="text-xl font-semibold text-white mb-8">
               Experiencia
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {experience.map((exp, index) => (
                 <div
                   key={index}

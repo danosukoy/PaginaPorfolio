@@ -50,12 +50,12 @@ export default function Skills() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="skills" className="py-32 px-8 lg:px-16 bg-dark-lighter w-full">
+    <section id="skills" className="py-40 px-8 lg:px-16 bg-dark-lighter w-full">
       <div className="w-full mx-auto">
         <div
           id="skills-header"
           data-animate
-          className={`text-center mb-16 transition-all duration-700 ${
+          className={`text-center mb-20 transition-all duration-700 ${
             visibleSections.has("skills-header")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -64,7 +64,7 @@ export default function Skills() {
           <span className="text-gold text-sm uppercase tracking-[0.3em]">
             Habilidades
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Tech Stack
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto">
@@ -75,7 +75,7 @@ export default function Skills() {
         <div
           id="skills-grid"
           data-animate
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-700 delay-200 ${
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 delay-200 ${
             visibleSections.has("skills-grid")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -86,10 +86,10 @@ export default function Skills() {
             return (
               <div
                 key={category.title}
-                className="bg-dark-card border border-dark-border rounded-sm p-6 hover:border-gold/50 transition-all duration-300 group"
+                className="bg-dark-card border border-dark-border rounded-sm p-8 hover:border-gold/50 transition-all duration-300 group"
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 bg-gold/10 rounded-sm group-hover:bg-gold/20 transition-colors">
                     <Icon size={20} className="text-gold" />
                   </div>

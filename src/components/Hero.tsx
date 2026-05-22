@@ -16,22 +16,22 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-8 lg:px-16 w-full">
-        <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-6">
+        <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-8">
           <Gamepad2 size={16} />
           <span>Game Developer</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
           Daniel
           <span className="text-gold"> Dongo</span>
         </h1>
 
-        <p className="text-text-muted text-center text-lg md:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+        <p className="text-text-muted text-center text-lg md:text-xl mb-14 max-w-xl mx-auto leading-relaxed">
           Creo experiencias interactivas memorables. Especializado en gameplay
           programming, sistemas de IA y diseño de mecánicas innovadoras.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
             href="#projects"
             className="px-8 py-3 bg-gold text-dark font-semibold rounded-sm hover:bg-gold-light transition-all duration-300 uppercase tracking-wider text-sm"

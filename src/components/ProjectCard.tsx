@@ -31,19 +31,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
 
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
+      <div className="p-8">
+        <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-bold text-white group-hover:text-gold transition-colors">
             {project.title}
           </h3>
           <span className="text-text-muted text-sm">{project.year}</span>
         </div>
 
-        <p className="text-text-muted text-sm leading-relaxed mb-4">
+        <p className="text-text-muted text-sm leading-relaxed mb-6">
           {project.description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-5">
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tags.map((tag) => (
             <span
               key={tag}
@@ -54,7 +54,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
 
-        <div className="flex items-center gap-3 pt-4 border-t border-dark-border">
+        <div className="flex items-center gap-3 pt-6 border-t border-dark-border">
           {project.demoUrl && project.demoUrl !== '#' && (
             <a
               href={project.demoUrl}

@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-32 px-8 lg:px-16 bg-dark-lighter w-full"
+      className="py-40 px-8 lg:px-16 bg-dark-lighter w-full"
     >
       <div className="w-full mx-auto text-center">
         <div
@@ -84,7 +84,7 @@ export default function Contact() {
           <span className="text-gold text-sm uppercase tracking-[0.3em]">
             Contacto
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             ¿Hablamos?
           </h2>
           <p className="text-text-muted max-w-3xl mx-auto">
@@ -96,7 +96,7 @@ export default function Contact() {
         <div
           id="contact-links"
           data-animate
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 transition-all duration-700 delay-200 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-6 mt-16 transition-all duration-700 delay-200 ${
             visibleSections.has("contact-links")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
