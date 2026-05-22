@@ -2,7 +2,7 @@ import { ChevronDown, Gamepad2 } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden w-full">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark to-dark-lighter" />
       <div className="absolute inset-0 opacity-5">
         <div

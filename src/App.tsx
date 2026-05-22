@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen bg-dark">
       <Navbar />
-      <main className="flex flex-col items-center">
+      <main className="flex flex-col w-full">
         <Hero />
         <Projects />
         <Skills />
