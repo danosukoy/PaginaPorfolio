@@ -1,4 +1,6 @@
 import { ChevronDown, Gamepad2 } from "lucide-react";
+import ProjectMarquee from "./ProjectMarquee";
+import { projects } from "../data/projects";
 
 export default function Hero() {
   return (
@@ -25,6 +27,8 @@ export default function Hero() {
           Daniel
           <span className="text-gold"> Dongo</span>
         </h1>
+
+        <ProjectMarquee projects={projects} />
 
         <p className="text-text-muted text-center text-lg md:text-xl mb-14 max-w-xl mx-auto leading-relaxed">
           Creo experiencias interactivas memorables. Especializado en gameplay

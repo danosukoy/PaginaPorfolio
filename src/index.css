@@ -48,3 +48,20 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-gold-dark);
 }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee {
+    animation: marquee 25s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
