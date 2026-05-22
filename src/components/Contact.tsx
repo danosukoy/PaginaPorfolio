@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-8 lg:px-16 bg-dark-lighter w-full"
+      className="py-32 px-8 lg:px-16 bg-dark-lighter w-full"
     >
       <div className="w-full mx-auto text-center">
         <div
