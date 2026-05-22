@@ -17,7 +17,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-8 lg:px-16 w-full">
+      <div className="relative z-10 text-center px-8 lg:px-16 w-full flex flex-col items-center">
         <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-8">
           <Gamepad2 size={16} />
           <span>Game Developer</span>
