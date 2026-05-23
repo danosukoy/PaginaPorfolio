@@ -93,7 +93,7 @@ export default function Contact() {
         <div
           id="contact-links"
           data-animate
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-6 mt-300 transition-all duration-700 delay-200 ${
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-10 mt-16 transition-all duration-700 delay-200 ${
             visibleSections.has("contact-links")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
