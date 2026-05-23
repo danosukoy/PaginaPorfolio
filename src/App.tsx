@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="min-h-screen bg-dark">
       <Navbar />
-      <main className="flex flex-col w-full gap-32">
+      <main className="flex flex-col w-full gap-48">
         <Hero />
         <Projects />
         <Skills />
