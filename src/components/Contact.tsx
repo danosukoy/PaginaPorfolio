@@ -68,7 +68,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-40 px-8 lg:px-16 bg-dark-lighter">
-      <div className="w-full mx-auto text-center">
+      <div className="w-full mx-auto text-center flex flex-col items-center">
         <div
           id="contact-header"
           data-animate
@@ -81,10 +81,10 @@ export default function Contact() {
           <span className="text-gold text-sm uppercase tracking-[0.3em]">
             Contacto
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-6">
             ¿Hablamos?
           </h2>
-          <p className="text-center max-w-3xl mx-auto w-full">
+          <p className="text-center max-w-3xl mx-auto">
             Estoy siempre abierto a nuevas oportunidades, colaboraciones en
             proyectos indie o simplemente charlar sobre game dev.
           </p>
