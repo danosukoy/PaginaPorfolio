@@ -97,13 +97,13 @@ export default function About() {
             <h3 className="text-xl font-semibold text-white mb-8">
               Experiencia
             </h3>
-            <div className="space-y-8">
+            <div className="flex flex-col">
               {experience.map((exp, index) => (
                 <div
                   key={index}
-                  className="relative pl-6 border-l-2 border-dark-border hover:border-gold/50 transition-colors group"
+                  className="relative pl-8 border-l-2 border-dark-border hover:border-gold/50 transition-colors group pb-12 last:pb-0"
                 >
-                  <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors" />
+                  <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors" />
                   <div className="mb-1">
                     <h4 className="text-white font-semibold">{exp.role}</h4>
                     <p className="text-gold text-sm">{exp.company}</p>
