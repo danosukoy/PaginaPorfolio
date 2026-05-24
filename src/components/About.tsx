@@ -47,7 +47,7 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white ">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
               Passionate Gameplay Developer
             </h2>
             <div className="space-y-6 text-text-muted leading-relaxed">
