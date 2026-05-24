@@ -35,6 +35,10 @@ export default function About() {
     <section id="about" className="py-40 px-8 lg:px-16 w-full">
       <div className="w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          <span className="text-gold text-sm uppercase tracking-[0.3em] text-center">
+            Sobre mí
+          </span>
+
           <div
             id="about-bio"
             data-animate
@@ -44,10 +48,7 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <span className="text-gold text-sm uppercase tracking-[0.3em]">
-              Sobre mí
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-8 mb-8">
               Passionate Gameplay Developer
             </h2>
             <div className="space-y-6 text-text-muted leading-relaxed">
@@ -94,7 +95,7 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-xl font-semibold text-white mb-8">
+            <h3 className="text-xl font-semibold text-white mb-8 text-center">
               Experiencia
             </h3>
             <div className="flex flex-col">
