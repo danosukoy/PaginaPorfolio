@@ -4,7 +4,7 @@ import { projects } from "../data/projects";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden w-full">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden max-w-6xl">
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark to-dark-lighter" />
       <div className="absolute inset-0 opacity-5">
         <div
@@ -17,7 +17,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-8 lg:px-16 w-full flex flex-col items-center gap-2">
+      <div className="relative z-10 text-center px-8 lg:px-16 max-w-6xl w-full mx-auto flex flex-col items-center gap-2">
         <div className="inline-flex items-center gap-2 text-gold text-sm uppercase tracking-[0.3em] mb-12">
           <Gamepad2 size={16} />
           <span>Game Developer</span>

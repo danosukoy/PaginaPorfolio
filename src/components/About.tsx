@@ -33,7 +33,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-40 px-8 lg:px-16 w-full">
-      <div className="w-full mx-auto">
+      <div className="max-w-6xl w-full mx-auto">
         <div className="text-gold text-sm uppercase tracking-[0.3em] text-center">
           Sobre mí
         </div>
