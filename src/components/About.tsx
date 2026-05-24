@@ -45,7 +45,7 @@ export default function About() {
               visibleSections.has("about-bio")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            } mt-4 mb-36`}
+            }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-36">
               Passionate Gameplay Developer
