@@ -1,15 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-    --color-gold: #d4a853;
-    --color-gold-light: #e8c97a;
-    --color-gold-dark: #b8923f;
-    --color-dark: #0a0a0a;
-    --color-dark-lighter: #111111;
-    --color-dark-card: #1a1a1a;
-    --color-dark-border: #2a2a2a;
-    --color-text: #e5e5e5;
-    --color-text-muted: #888888;
+    --color-gold: #e5b05c;
+    --color-gold-light: #f3d496;
+    --color-gold-dark: #b8853f;
+    --color-dark: #050505;
+    --color-dark-lighter: #0a0a0b;
+    --color-dark-card: #121214;
+    --color-dark-border: #222225;
+    --color-text: #f0f0f0;
+    --color-text-muted: #9ca3af;
+    
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Outfit', system-ui, sans-serif;
 }
 
 html {
@@ -19,11 +22,12 @@ html {
 body {
     background-color: var(--color-dark);
     color: var(--color-text);
-    font-family:
-        system-ui,
-        -apple-system,
-        sans-serif;
+    font-family: var(--font-sans);
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
 }
 
 * {

@@ -32,8 +32,9 @@ export default function About() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="about" className="pt-20 pb-40 px-8 lg:px-16 w-full">
-      <div className="w-full mx-auto">
+    <section id="about" className="pt-20 pb-40 px-8 lg:px-16 w-full relative">
+      <div className="absolute left-0 top-1/4 w-[500px] h-[500px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="max-w-7xl w-full mx-auto relative z-10">
         <div className="text-gold text-sm uppercase tracking-[0.3em] mb-16 text-center">
           Sobre mí
         </div>
@@ -94,22 +95,22 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-xl font-semibold text-white mb-8">
+            <h3 className="text-2xl font-bold text-white mb-8">
               Experiencia
             </h3>
-            <div className="space-y-8">
+            <div className="flex flex-col gap-0">
               {experience.map((exp, index) => (
                 <div
                   key={index}
-                  className="relative pl-6 border-l-2 border-dark-border hover:border-gold/50 transition-colors group"
+                  className="relative pl-8 pb-12 last:pb-0 border-l-2 border-dark-border hover:border-gold/50 transition-colors group"
                 >
-                  <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors" />
+                  <div className="absolute left-[-6px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors shadow-[0_0_0_0_rgba(229,176,92,0)] group-hover:shadow-[0_0_10px_2px_rgba(229,176,92,0.5)]" />
                   <div className="mb-1">
-                    <h4 className="text-white font-semibold">{exp.role}</h4>
-                    <p className="text-gold text-sm">{exp.company}</p>
+                    <h4 className="text-white font-bold text-lg">{exp.role}</h4>
+                    <p className="text-gold font-medium">{exp.company}</p>
                   </div>
-                  <div className="flex items-center gap-4 text-text-muted text-sm mb-2">
-                    <span>{exp.period}</span>
+                  <div className="flex items-center gap-4 text-text-muted text-sm mb-3">
+                    <span className="bg-dark-border/50 px-2 py-0.5 rounded-sm">{exp.period}</span>
                     <span>·</span>
                     <span>{exp.location}</span>
                   </div>

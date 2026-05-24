@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <div
-      className="group bg-dark-card border border-dark-border rounded-sm overflow-hidden hover:border-gold/50 transition-all duration-500"
+      className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-gold/30 hover:-translate-y-2 hover:shadow-[0_15px_30px_-10px_rgba(229,176,92,0.15)] transition-all duration-500"
       style={{ animationDelay: `${index * 100}ms` }}
     >
       <div className="relative overflow-hidden aspect-video">
@@ -25,7 +25,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent opacity-60" />
         <div className="absolute top-3 right-3">
-          <span className="px-3 py-1 bg-dark/80 backdrop-blur-sm text-gold text-xs uppercase tracking-wider rounded-sm border border-gold/30">
+          <span className="px-3 py-1 bg-dark/80 backdrop-blur-md text-gold text-xs uppercase tracking-wider rounded-lg border border-white/10">
             {project.engine}
           </span>
         </div>
@@ -47,7 +47,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 bg-dark-lighter text-text-muted text-xs rounded-sm border border-dark-border"
+              className="px-2 py-1 bg-dark border border-white/5 text-text-muted text-xs rounded-lg"
             >
               {tag}
             </span>

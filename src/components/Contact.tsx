@@ -67,8 +67,9 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-40 px-8 lg:px-16 bg-dark-lighter">
-      <div className="w-full mx-auto text-center">
+    <section id="contact" className="py-40 px-8 lg:px-16 bg-dark-lighter relative overflow-hidden">
+      <div className="absolute right-0 bottom-0 w-[600px] h-[600px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
+      <div className="max-w-7xl w-full mx-auto text-center relative z-10">
         <div
           id="contact-header"
           data-animate
@@ -107,7 +108,7 @@ export default function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-dark-card border border-dark-border rounded-sm hover:border-gold/50 transition-all duration-300 group text-left"
+                className="flex items-center gap-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:border-gold/30 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(229,176,92,0.2)] transition-all duration-300 group text-left"
               >
                 <div className="p-3 bg-gold/10 rounded-sm group-hover:bg-gold/20 transition-colors">
                   <Icon size={20} className="text-gold" />

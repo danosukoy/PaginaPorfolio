@@ -8,9 +8,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-40 px-8 lg:px-16 w-full flex flex-col items-center"
+      className="py-40 px-8 lg:px-16 w-full flex flex-col items-center relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="absolute left-[-20%] top-1/3 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
+      <div className="max-w-7xl w-full mx-auto relative z-10">
         <div
           id="projects-header"
           data-animate

@@ -52,9 +52,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-40 px-8 lg:px-16 bg-dark-lighter w-full flex flex-col items-center"
+      className="py-40 px-8 lg:px-16 bg-dark-lighter w-full flex flex-col items-center relative overflow-hidden"
     >
-      <div className="max-w-6xl w-full mx-auto">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
+      <div className="max-w-7xl w-full mx-auto relative z-10">
         <div
           id="skills-header"
           data-animate
@@ -89,7 +90,7 @@ export default function Skills() {
             return (
               <div
                 key={category.title}
-                className="bg-dark-card border border-dark-border rounded-sm p-8 hover:border-gold/50 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-gold/30 hover:-translate-y-2 hover:shadow-[0_15px_30px_-10px_rgba(229,176,92,0.15)] transition-all duration-500 group"
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
                 <div className="flex items-center gap-3 mb-6">
@@ -104,7 +105,7 @@ export default function Skills() {
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 bg-dark-lighter text-text-muted text-sm rounded-sm border border-dark-border hover:border-gold/30 hover:text-gold transition-colors cursor-default"
+                      className="px-3 py-1.5 bg-dark border border-white/5 text-text-muted text-sm rounded-lg hover:border-gold/30 hover:text-gold transition-colors cursor-default"
                     >
                       {skill}
                     </span>

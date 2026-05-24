@@ -20,13 +20,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-4 left-4 right-4 md:top-6 md:left-8 md:right-8 z-50 transition-all duration-500 max-w-7xl mx-auto rounded-2xl ${
         scrolled
-          ? "bg-dark/95 backdrop-blur-md border-b border-dark-border"
-          : "bg-transparent"
+          ? "bg-dark/70 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 py-2"
+          : "bg-transparent py-4"
       }`}
     >
-      <div className="w-full mx-auto px-8 lg:px-16 h-16 flex items-center justify-between">
+      <div className="w-full px-6 lg:px-10 flex items-center justify-between">
         <a href="#" className="text-gold font-bold text-xl tracking-wider">
           DEV<span className="text-white">.PORTFOLIO</span>
         </a>
