@@ -41,16 +41,16 @@ export default function About() {
           <div
             id="about-bio"
             data-animate
-            className={`transition-all duration-700 ${
+            className={`flex flex-col gap-12 transition-all duration-700 ${
               visibleSections.has("about-bio")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-36">
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               Passionate Gameplay Developer
             </h2>
-            <div className="space-y-10 text-text-muted leading-relaxed">
+            <div className="space-y-6 text-text-muted leading-relaxed">
               <p>
                 Soy un desarrollador de videojuegos con más de 3 años de
                 experiencia creando experiencias interactivas en múltiples
@@ -69,7 +69,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-8 mt-10">
+            <div className="flex flex-wrap gap-8">
               <div className="flex items-center gap-2 text-text-muted">
                 <Calendar size={16} className="text-gold" />
                 <span className="text-sm">3+ años de experiencia</span>
