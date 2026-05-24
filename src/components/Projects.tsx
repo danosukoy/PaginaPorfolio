@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-40 px-8 lg:px-16 w-full flex flex-col items-center text-center"
+      className="py-40 px-8 lg:px-16 w-full flex flex-col items-center"
     >
       <div className="max-w-6xl mx-auto">
         <div
@@ -26,7 +26,7 @@ export default function Projects() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Proyectos Destacados
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
+          <p className="text-text-muted max-w-2xl mx-auto text-center">
             Una selección de mis trabajos más recientes en desarrollo de
             videojuegos
           </p>

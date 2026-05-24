@@ -70,7 +70,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Tech Stack
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto">
+          <p className="text-text-muted max-w-2xl mx-auto text-center">
             Tecnologías y herramientas que uso para dar vida a los juegos
           </p>
         </div>
