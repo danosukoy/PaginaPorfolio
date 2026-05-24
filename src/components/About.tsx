@@ -43,7 +43,7 @@ export default function About() {
             data-animate
             className={`transition-all duration-700 ${
               visibleSections.has("about-bio")
-                ? "opacity-100 translate-y-0"
+                ? "opacity-100 translate-y-3"
                 : "opacity-0 translate-y-8"
             }`}
           >
