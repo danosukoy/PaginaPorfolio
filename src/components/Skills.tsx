@@ -54,7 +54,7 @@ export default function Skills() {
       id="skills"
       className="py-40 px-8 lg:px-16 bg-dark-lighter w-full flex flex-col items-center"
     >
-      <div className="max-w-6xl w-full mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div
           id="skills-header"
           data-animate
@@ -70,7 +70,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
             Tech Stack
           </h2>
-          <p className="text-text-muted max-w-2xl mx-auto text-center">
+          <p className="text-text-muted max-w-2xl mx-auto w-full text-center">
             Tecnologías y herramientas que uso para dar vida a los juegos
           </p>
         </div>
