@@ -50,7 +50,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-36">
               Passionate Gameplay Developer
             </h2>
-            <div className="space-y-6 text-text-muted leading-relaxed">
+            <div className="space-y-8 text-text-muted leading-relaxed">
               <p>
                 Soy un desarrollador de videojuegos con más de 3 años de
                 experiencia creando experiencias interactivas en múltiples
