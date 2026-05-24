@@ -33,7 +33,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-40 px-8 lg:px-16 w-full">
-      <div className="max-w-6xl w-full mx-auto">
+      <div className="w-full mx-auto">
         <div className="text-gold text-sm uppercase tracking-[0.3em] text-center">
           Sobre mí
         </div>
@@ -41,13 +41,13 @@ export default function About() {
           <div
             id="about-bio"
             data-animate
-            className={`flex flex-col gap-12 transition-all duration-700 ${
+            className={`transition-all duration-700 ${
               visibleSections.has("about-bio")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-36">
               Passionate Gameplay Developer
             </h2>
             <div className="space-y-6 text-text-muted leading-relaxed">
@@ -69,7 +69,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-8">
+            <div className="flex flex-wrap gap-8 mt-10">
               <div className="flex items-center gap-2 text-text-muted">
                 <Calendar size={16} className="text-gold" />
                 <span className="text-sm">3+ años de experiencia</span>
@@ -94,16 +94,16 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-xl font-semibold text-white mb-8 text-center">
+            <h3 className="text-xl font-semibold text-white mb-8">
               Experiencia
             </h3>
-            <div className="flex flex-col">
+            <div className="space-y-8">
               {experience.map((exp, index) => (
                 <div
                   key={index}
-                  className="relative pl-8 border-l-2 border-dark-border hover:border-gold/50 transition-colors group pb-12 last:pb-0"
+                  className="relative pl-6 border-l-2 border-dark-border hover:border-gold/50 transition-colors group"
                 >
-                  <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors" />
+                  <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors" />
                   <div className="mb-1">
                     <h4 className="text-white font-semibold">{exp.role}</h4>
                     <p className="text-gold text-sm">{exp.company}</p>
