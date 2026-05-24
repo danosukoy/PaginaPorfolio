@@ -6,8 +6,11 @@ export default function Projects() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="projects" className="py-40 px-8 lg:px-16 w-full">
-      <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+    <section
+      id="projects"
+      className="py-40 px-8 lg:px-16 w-full flex flex-col items-center text-center"
+    >
+      <div className="max-w-6xl mx-auto">
         <div
           id="projects-header"
           data-animate
