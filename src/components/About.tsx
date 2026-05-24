@@ -34,9 +34,9 @@ export default function About() {
   return (
     <section id="about" className="py-40 px-8 lg:px-16 w-full">
       <div className="w-full mx-auto">
-        <span className="text-gold text-sm uppercase tracking-[0.3em] text-center">
+        <div className="text-gold text-sm uppercase tracking-[0.3em] text-center">
           Sobre mí
-        </span>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div
             id="about-bio"
@@ -47,7 +47,7 @@ export default function About() {
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-36">
               Passionate Gameplay Developer
             </h2>
             <div className="space-y-6 text-text-muted leading-relaxed">
