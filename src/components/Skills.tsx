@@ -54,7 +54,7 @@ export default function Skills() {
       id="skills"
       className="py-40 px-8 lg:px-16 bg-dark-lighter w-full flex flex-col items-center"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl w-full mx-auto">
         <div
           id="skills-header"
           data-animate
