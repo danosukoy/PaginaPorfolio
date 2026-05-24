@@ -34,7 +34,7 @@ export default function About() {
   return (
     <section id="about" className="pt-20 pb-40 px-8 lg:px-16 w-full">
       <div className="w-full mx-auto">
-        <div className="text-gold text-sm uppercase tracking-[0.3em] text-center">
+        <div className="text-gold text-sm uppercase tracking-[0.3em] mb-16 text-center">
           Sobre mí
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
