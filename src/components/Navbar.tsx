@@ -20,9 +20,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-4 left-4 right-4 md:top-6 md:left-8 md:right-8 z-50 transition-all duration-500 max-w-7xl mx-auto rounded-2xl ${
+      className={`fixed top-4 left-4 right-4 md:top-6 md:left-8 md:right-8 z-50 transition-all duration-500 max-w-screen mx-auto rounded-2xl ${
         scrolled
-          ? "bg-dark/70 backdrop-blur-xl border border-white/10 shadow-2xl shadow-black/50 py-2"
+          ? "bg-dark-card/90 backdrop-blur-md border border-white/5 shadow-2xl shadow-black/50 py-2"
           : "bg-transparent py-4"
       }`}
     >

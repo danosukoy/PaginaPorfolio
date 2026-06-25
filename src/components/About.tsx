@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import { Calendar, MapPin, Briefcase } from "lucide-react";
+import { Calendar, MapPin, Briefcase, GraduationCap } from "lucide-react";
 
 const experience = [
   {
@@ -28,49 +28,85 @@ const experience = [
   },
 ];
 
+const education = [
+  {
+    degree: "Especialización Frontend & Backend Developer",
+    institution: "Tech Academy",
+    period: "2023",
+    description: "Profundización en desarrollo web fullstack, APIs REST, Node.js y arquitectura en la nube (AWS/Docker).",
+  },
+  {
+    degree: "Grado en Desarrollo de Videojuegos",
+    institution: "Universidad de Tecnología y Arte",
+    period: "2018 - 2022",
+    description: "Especialización en programación gráfica, física de videojuegos y desarrollo de motores con C++ y Unity.",
+  }
+];
+
 export default function About() {
   const visibleSections = useScrollAnimation();
 
   return (
-    <section id="about" className="pt-20 pb-40 px-8 lg:px-16 w-full relative">
-      <div className="absolute left-0 top-1/4 w-[500px] h-[500px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="max-w-7xl w-full mx-auto relative z-10">
-        <div className="text-gold text-sm uppercase tracking-[0.3em] mb-16 text-center">
-          Sobre mí
+    <section id="about" className="portfolio-section bg-shared-portfolio">
+      <div className="section-container">
+        
+        {/* Unified Section Header */}
+        <div
+          id="about-header"
+          data-animate
+          className={`section-header ${
+            visibleSections.has("about-header")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <span className="section-tag">Sobre mí</span>
+          <h2 className="section-title">Mi Trayectoria</h2>
+          <p className="section-subtitle">
+            Conoce más sobre mi pasión por el desarrollo de videojuegos, ingeniería de software y mi experiencia profesional.
+          </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+          {/* Left Column: Bio Details */}
           <div
             id="about-bio"
             data-animate
-            className={`flex flex-col gap-12 transition-all duration-700 ${
+            className={`flex flex-col gap-10 transition-all duration-700 ${
               visibleSections.has("about-bio")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Passionate Gameplay Developer
-            </h2>
+            <div className="space-y-4">
+              <span className="text-gold/80 text-sm font-semibold tracking-wider uppercase">
+                Quién soy
+              </span>
+              <h3 className="text-3xl font-bold text-white leading-tight">
+                Developer enfocado en crear experiencias interactivas y robustas
+              </h3>
+            </div>
+            
             <div className="space-y-6 text-text-muted leading-relaxed">
               <p>
-                Soy un desarrollador de videojuegos con más de 3 años de
-                experiencia creando experiencias interactivas en múltiples
-                plataformas. Mi pasión está en el gameplay programming y la
-                creación de sistemas que hacen que los juegos se sientan bien.
+                Soy un desarrollador con más de 3 años de experiencia en la creación 
+                de videojuegos y desarrollo web. Mi enfoque principal está en el 
+                gameplay programming y en construir arquitecturas frontend y backend 
+                que ofrezcan experiencias de usuario excelentes y alto rendimiento.
               </p>
               <p>
-                He trabajado con Unity, Unreal Engine y Godot, desarrollando
-                desde juegos mobile hypercasual hasta proyectos AA con sistemas
-                complejos de IA y multijugador.
+                He trabajado en entornos indie y proyectos colaborativos desarrollando 
+                sistemas complejos de IA, mecánicas de juego en 3D/2D con Unity y Godot, 
+                así como aplicaciones web modernas utilizando React, Node.js y bases de datos.
               </p>
               <p>
-                Cuando no estoy programando, participo en game jams, contribuyo
-                a proyectos open source y experimento con nuevas tecnologías de
-                rendering y procedural generation.
+                Me entusiasma aprender continuamente, participar en hackathons, 
+                game jams y explorar tecnologías en la intersección del software web 
+                y el desarrollo interactivo.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-8">
+            <div className="flex flex-wrap gap-8 pt-4 border-t border-white/5">
               <div className="flex items-center gap-2 text-text-muted">
                 <Calendar size={16} className="text-gold" />
                 <span className="text-sm">3+ años de experiencia</span>
@@ -86,40 +122,72 @@ export default function About() {
             </div>
           </div>
 
+          {/* Right Column: Timeline Groups (Experience & Education) */}
           <div
             id="about-experience"
             data-animate
-            className={`transition-all duration-700 delay-200 ${
+            className={`flex flex-col gap-12 transition-all duration-700 delay-200 ${
               visibleSections.has("about-experience")
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
           >
-            <h3 className="text-2xl font-bold text-white mb-8">
-              Experiencia
-            </h3>
-            <div className="flex flex-col gap-0">
-              {experience.map((exp, index) => (
-                <div
-                  key={index}
-                  className="relative pl-8 pb-12 last:pb-0 border-l-2 border-dark-border hover:border-gold/50 transition-colors group"
-                >
-                  <div className="absolute left-[-6px] top-1.5 w-2.5 h-2.5 rounded-full bg-dark-border group-hover:bg-gold transition-colors shadow-[0_0_0_0_rgba(229,176,92,0)] group-hover:shadow-[0_0_10px_2px_rgba(229,176,92,0.5)]" />
-                  <div className="mb-1">
-                    <h4 className="text-white font-bold text-lg">{exp.role}</h4>
-                    <p className="text-gold font-medium">{exp.company}</p>
+            {/* Experience Group */}
+            <div>
+              <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                <Briefcase size={20} className="text-gold" />
+                Experiencia Laboral
+              </h3>
+              <div className="flex flex-col gap-0">
+                {experience.map((exp, index) => (
+                  <div key={index} className="timeline-item">
+                    <div className="timeline-bullet" />
+                    <div className="timeline-header">
+                      <h4 className="timeline-title">{exp.role}</h4>
+                      <p className="timeline-subtitle">{exp.company}</p>
+                    </div>
+                    <div className="timeline-meta">
+                      <span className="timeline-badge">
+                        {exp.period}
+                      </span>
+                      <span>·</span>
+                      <span>{exp.location}</span>
+                    </div>
+                    <p className="timeline-description">
+                      {exp.description}
+                    </p>
                   </div>
-                  <div className="flex items-center gap-4 text-text-muted text-sm mb-3">
-                    <span className="bg-dark-border/50 px-2 py-0.5 rounded-sm">{exp.period}</span>
-                    <span>·</span>
-                    <span>{exp.location}</span>
-                  </div>
-                  <p className="text-text-muted text-sm leading-relaxed">
-                    {exp.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            {/* Education Group */}
+            <div className="pt-6 border-t border-white/5">
+              <h3 className="text-xl font-bold text-white mb-8 flex items-center gap-3">
+                <GraduationCap size={20} className="text-gold" />
+                Educación y Certificaciones
+              </h3>
+              <div className="flex flex-col gap-0">
+                {education.map((edu, index) => (
+                  <div key={index} className="timeline-item">
+                    <div className="timeline-bullet" />
+                    <div className="timeline-header">
+                      <h4 className="timeline-title">{edu.degree}</h4>
+                      <p className="timeline-subtitle">{edu.institution}</p>
+                    </div>
+                    <div className="timeline-meta">
+                      <span className="timeline-badge">
+                        {edu.period}
+                      </span>
+                    </div>
+                    <p className="timeline-description">
+                      {edu.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

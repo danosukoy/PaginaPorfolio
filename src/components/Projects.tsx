@@ -1,52 +1,89 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import { projects } from "../data/projects";
+import { projects, type Project } from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import ProjectPanel from "./ProjectPanel";
+import { useState } from "react";
 
 export default function Projects() {
   const visibleSections = useScrollAnimation();
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeCategory, setActiveCategory] = useState<"gamedev" | "webdev">(
+    "gamedev",
+  );
+
+  const filteredProjects = projects.filter(
+    (project) => project.category === activeCategory,
+  );
 
   return (
     <section
       id="projects"
-      className="py-40 px-8 lg:px-16 w-full flex flex-col items-center relative overflow-hidden"
+      className="portfolio-section bg-shared-portfolio min-h-screen"
     >
-      <div className="absolute left-[-20%] top-1/3 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
-      <div className="max-w-7xl w-full mx-auto relative z-10">
+      <div className="section-container">
         <div
           id="projects-header"
           data-animate
-          className={`text-center mb-20 transition-all duration-700 ${
+          className={`section-header ${
             visibleSections.has("projects-header")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-gold text-sm uppercase tracking-[0.3em]">
-            Portfolio
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">
-            Proyectos Destacados
-          </h2>
-          <p className="text-text-muted text-center">
+          <span className="section-tag">Portfolio</span>
+          <h2 className="section-title">Proyectos Destacados</h2>
+          <p className="section-subtitle">
             Una selección de mis trabajos más recientes en desarrollo de
-            videojuegos
+            videojuegos y desarrollo web / backend
           </p>
         </div>
 
-        <div
-          id="projects-grid"
-          data-animate
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 delay-200 ${
-            visibleSections.has("projects-grid")
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-8"
-          }`}
-        >
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
+        <div className="flex flex-col gap-7">
+          {/* Category Switcher */}
+          <div className="flex flex-wrap gap-6 justify-center w-full mb-12">
+            <button
+              onClick={() => setActiveCategory("gamedev")}
+              className={`tab-button ${
+                activeCategory === "gamedev" ? "tab-button-active" : ""
+              }`}
+            >
+              🕹️ GameDev
+            </button>
+            <button
+              onClick={() => setActiveCategory("webdev")}
+              className={`tab-button ${
+                activeCategory === "webdev" ? "tab-button-active" : ""
+              }`}
+            >
+              💻 Frontend & Backend
+            </button>
+          </div>
+
+          <div
+            id="projects-grid"
+            data-animate
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12 pt-16 transition-all duration-700 delay-200 ${
+              visibleSections.has("projects-grid")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            {filteredProjects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                onSelect={() => setSelectedProject(project)}
+              />
+            ))}
+          </div>
         </div>
       </div>
+      <ProjectPanel
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

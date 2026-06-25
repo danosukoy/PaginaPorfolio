@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { Mail, ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 const GithubIcon = () => (
   <svg
@@ -38,6 +39,17 @@ const LinkedinIcon = () => (
 
 export default function Contact() {
   const visibleSections = useScrollAnimation();
+  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormState({ name: "", email: "", message: "" });
+    }, 3000);
+  };
 
   const links = [
     {
@@ -67,62 +79,141 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-40 px-8 lg:px-16 bg-dark-lighter relative overflow-hidden">
-      <div className="absolute right-0 bottom-0 w-[600px] h-[600px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
-      <div className="max-w-7xl w-full mx-auto text-center relative z-10">
+    <section id="contact" className="portfolio-section bg-shared-portfolio min-h-screen3">
+      <div className="section-container">
+        
+        {/* Unified Section Header */}
         <div
           id="contact-header"
           data-animate
-          className={`transition-all duration-700 ${
+          className={`section-header ${
             visibleSections.has("contact-header")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-gold text-sm uppercase tracking-[0.3em]">
-            Contacto
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
-            ¿Hablamos?
-          </h2>
-          <p className="text-center max-w-3xl mx-auto w-full">
-            Estoy siempre abierto a nuevas oportunidades, colaboraciones en
-            proyectos indie o simplemente charlar sobre game dev.
+          <span className="section-tag">Contacto</span>
+          <h2 className="section-title">¿Hablamos?</h2>
+          <p className="section-subtitle">
+            Estoy siempre abierto a nuevas oportunidades, colaboraciones en proyectos indie o simplemente charlar sobre software.
           </p>
         </div>
 
-        <div
-          id="contact-links"
-          data-animate
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-6 mt-16 transition-all duration-700 delay-200 ${
-            visibleSections.has("contact-links")
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-8"
-          }`}
-        >
-          {links.map((link) => {
-            const Icon = link.icon;
-            return (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:border-gold/30 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(229,176,92,0.2)] transition-all duration-300 group text-left"
+        {/* 2-Column Info Groups: Form vs Links */}
+        <div className="contact-section-container">
+          
+          {/* Group 1: Send a Message Form */}
+          <div
+            id="contact-form"
+            data-animate
+            className={`transition-all duration-700 delay-100 ${
+              visibleSections.has("contact-form")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <h3 className="contact-group-title">
+              Envía un Mensaje
+            </h3>
+            <form onSubmit={handleSubmit} className="contact-form-card">
+              <div>
+                <label htmlFor="name" className="contact-field-label">
+                  Nombre
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  value={formState.name}
+                  onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                  placeholder="Tu nombre"
+                  className="contact-field-input"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="contact-field-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  value={formState.email}
+                  onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                  placeholder="tu@email.com"
+                  className="contact-field-input"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="contact-field-label">
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  required
+                  rows={4}
+                  value={formState.message}
+                  onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                  placeholder="Hola, me gustaría hablar sobre..."
+                  className="contact-field-input resize-none"
+                />
+              </div>
+              <button
+                type="submit"
+                className={`btn-contact-submit ${
+                  submitted
+                    ? "bg-emerald-500 text-white shadow-[0_4px_20px_rgba(16,185,129,0.3)]"
+                    : "bg-gold hover:bg-gold-light text-dark shadow-[0_4px_20px_rgba(229,176,92,0.2)] hover:scale-[1.01] active:scale-[0.99]"
+                }`}
               >
-                <div className="p-3 bg-gold/10 rounded-sm group-hover:bg-gold/20 transition-colors">
-                  <Icon size={20} className="text-gold" />
-                </div>
-                <div>
-                  <p className="text-text-muted text-sm">{link.label}</p>
-                  <p className="text-white font-medium group-hover:text-gold transition-colors">
-                    {link.value}
-                  </p>
-                </div>
-              </a>
-            );
-          })}
+                {submitted ? "✓ ¡Enviado con Éxito!" : "Enviar Mensaje"}
+              </button>
+            </form>
+          </div>
+
+          {/* Group 2: Social Media and Channels */}
+          <div
+            id="contact-links"
+            data-animate
+            className={`flex flex-col transition-all duration-700 delay-200 ${
+              visibleSections.has("contact-links")
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            <h3 className="contact-group-title">
+              Redes y Canales
+            </h3>
+            <div className="flex flex-col gap-5">
+              {links.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-card"
+                  >
+                    <div className="social-card-icon-wrapper">
+                      <Icon size={20} className="text-gold" />
+                    </div>
+                    <div>
+                      <p className="social-card-label">
+                        {link.label}
+                      </p>
+                      <p className="social-card-value">
+                        {link.value}
+                      </p>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
   );

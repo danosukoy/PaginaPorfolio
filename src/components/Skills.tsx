@@ -52,14 +52,13 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-40 px-8 lg:px-16 bg-dark-lighter w-full flex flex-col items-center relative overflow-hidden"
+      className="py-32 md:py-40 px-8 lg:px-16 bg-shared-portfolio w-full flex flex-col items-center justify-center min-h-screen2"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full pointer-events-none" />
-      <div className="max-w-7xl w-full mx-auto relative z-10">
+      <div className="w-full max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         <div
           id="skills-header"
           data-animate
-          className={`text-center mb-20 transition-all duration-700 ${
+          className={`flex flex-col gap-10 text-center  transition-all duration-700 ${
             visibleSections.has("skills-header")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -90,7 +89,7 @@ export default function Skills() {
             return (
               <div
                 key={category.title}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 hover:border-gold/30 hover:-translate-y-2 hover:shadow-[0_15px_30px_-10px_rgba(229,176,92,0.15)] transition-all duration-500 group"
+                className="glass-card group"
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
                 <div className="flex items-center gap-3 mb-6">
